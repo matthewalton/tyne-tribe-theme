@@ -1,0 +1,30 @@
+header.navbar {
+  ul.nav {
+    li.nav-item {
+      &.current-menu-item {
+        a {
+          font-weight: 700;
+          color: var(--bs-nav-underline-link-active-color);
+          border-bottom-color: currentcolor;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  header.navbar {
+    ul.nav {
+      gap: 0.25rem;
+
+      li.nav-item {
+        width: 100%;
+
+        a {
+          width: auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

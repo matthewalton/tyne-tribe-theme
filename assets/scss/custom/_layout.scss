@@ -1,0 +1,28 @@
+$fixed-navbar-offset: 120px;
+
+$wp-admin-bar-offset: 32px;
+$wp-admin-bar-mobile-offset: 46px;
+
+body {
+  header#site-header {
+    top: $wp-admin-bar-offset;
+  }
+
+  margin-top: $fixed-navbar-offset;
+
+  &.logged-in {
+    margin-top: calc($wp-admin-bar-offset + $fixed-navbar-offset);
+  }
+}
+
+@media screen and (max-width: 782px) {
+  body {
+    header#site-header {
+      top: $wp-admin-bar-mobile-offset;
+    }
+
+    &.logged-in {
+      margin-top: calc($wp-admin-bar-mobile-offset + $fixed-navbar-offset);
+    }
+  }
+}
