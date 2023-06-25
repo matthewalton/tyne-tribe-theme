@@ -11856,19 +11856,13 @@ textarea.form-control-lg {
 body {
   margin-top: 120px;
 }
-body header#site-header {
+body.logged-in header#site-header {
   top: 32px;
-}
-body.logged-in {
-  margin-top: 152px;
 }
 
 @media screen and (max-width: 782px) {
-  body header#site-header {
+  body.logged-in header#site-header {
     top: 46px;
-  }
-  body.logged-in {
-    margin-top: 166px;
   }
 }
 header.navbar ul.nav li.nav-item.current-menu-item a {

@@ -39,9 +39,7 @@
         }
 
         const themeSwitcherText = document.querySelector('#bd-theme-text')
-        const activeThemeIcon = document.querySelector('.theme-icon-active use')
         const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-        const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
 
         document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
             element.classList.remove('active')
@@ -50,7 +48,15 @@
 
         btnToActive.classList.add('active')
         btnToActive.setAttribute('aria-pressed', 'true')
-        activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+
+        if (theme === 'light') {
+            document.querySelector('#bd-theme svg.light').classList.remove('d-none');
+            document.querySelector('#bd-theme svg.dark').classList.add('d-none');
+        } else {
+            document.querySelector('#bd-theme svg.light').classList.add('d-none');
+            document.querySelector('#bd-theme svg.dark').classList.remove('d-none');
+        }
+
         const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
         themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
 

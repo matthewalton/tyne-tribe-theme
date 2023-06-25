@@ -24,7 +24,7 @@ if ( !$footer_nav_menu ) return;
 
 <hr class="my-5">
 
-<footer id="site-footer" class="site-footer sticky-footer" role="contentinfo">
+<footer id="site-footer" class="site-footer sticky-footer pb-5" role="contentinfo">
     <div class="container d-md-flex justify-content-between gap-4">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 		    <?php
