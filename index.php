@@ -135,6 +135,56 @@ get_header();
                     <a class="btn btn-secondary rounded-pill" href="<?php next_posts( $max_page ); ?>">Older</a>
                 <?php } ?>
             </nav>
+        <?php } else if (is_search()) { ?>
+            <div class="page-content">
+		        <?php if ( have_posts() ) : ?>
+                    <div class="row g-5">
+			        <?php
+                        while ( have_posts() ) :
+                            the_post();
+                            $post_link = get_permalink();
+                            ?>
+                            <div class="col-md-12 mb-4">
+                                <article class="blog-post">
+                                    <h2 class="display-5 link-body-emphasis mb-1"><?php the_title(); ?></h2>
+                                    <p class="blog-post-meta">
+                                        <?php echo get_the_date(); ?>
+                                    </p>
+
+                                    <hr class="my-2">
+
+                                    <?php the_excerpt(); ?>
+
+                                    <p class="lead mb-0"><a href="<?php the_permalink(); ?>" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+                                </article>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+		        <?php else : ?>
+                    <p><?php echo esc_html__( 'It seems we can\'t find what you\'re looking for.', 'hello-elementor' ); ?></p>
+		        <?php endif; ?>
+            </div>
+
+	        <?php wp_link_pages(); ?>
+
+	        <?php
+	        global $wp_query;
+
+	        $max_page = $wp_query->max_num_pages;
+	        $current_page = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+	        $current_page = max( 1, $current_page );
+	        $next_page = (int) $current_page + 1;
+	        if ( $max_page > 1 ) :
+		        ?>
+                <nav class="-pagination" aria-label="Pagination">
+			        <?php if ($current_page >  1) { ?>
+                        <a class="btn btn-outline-secondary rounded-pill" href="<?php previous_posts(); ?>">Newer</a>
+			        <?php } ?>
+			        <?php if ($next_page < $max_page) { ?>
+                        <a class="btn btn-secondary rounded-pill" href="<?php next_posts( $max_page ); ?>">Older</a>
+			        <?php } ?>
+                </nav>
+	        <?php endif; ?>
         <?php } else { ?>
 	        <?php the_content(); ?>
         <?php } ?>
