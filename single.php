@@ -39,7 +39,9 @@ while ( have_posts() ) : the_post();
 			<?php wp_link_pages(); ?>
         </div>
 
-		<?php comments_template(); ?>
+        <?php if ( comments_open() ) { ?>
+	        <?php comments_template(); ?>
+        <?php } ?>
 	</main>
 
 <?php
