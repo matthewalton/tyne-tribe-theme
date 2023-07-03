@@ -3,6 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+global $wp_query;
 get_header();
 ?>
 
@@ -137,10 +138,17 @@ get_header();
             </nav>
         <?php } else if (is_search()) { ?>
             <div class="page-content">
+                <h1>
+                    <?php echo $wp_query->found_posts; ?>
+                    <?php echo $wp_query->found_posts === 1 ? 'result' : 'results'; ?>
+                    for
+                    "<?php echo trim(get_search_query()); ?>"
+                </h1>
+
 		        <?php if ( have_posts() ) : ?>
                     <div class="row g-5">
 			        <?php
-                        while ( have_posts() ) :
+                    while ( have_posts() ) :
                             the_post();
                             $post_link = get_permalink();
                             ?>
@@ -162,6 +170,7 @@ get_header();
                     </div>
 		        <?php else : ?>
                     <p><?php echo esc_html__( 'It seems we can\'t find what you\'re looking for.', TYNE_TRIBE_DOMAIN ); ?></p>
+                    <?php get_search_form(); ?>
 		        <?php endif; ?>
             </div>
 
