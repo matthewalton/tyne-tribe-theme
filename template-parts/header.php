@@ -28,7 +28,7 @@ $header_nav_menu = wp_nav_menu( [
 		    ?>
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeaderMenuCollapse" aria-controls="navbarHeaderMenuCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeaderMenuCollapse" aria-controls="navbarHeaderMenuCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
