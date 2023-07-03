@@ -9821,6 +9821,9 @@ textarea.form-control-lg {
 body {
   margin-top: 120px;
 }
+body div#wpadminbar {
+  position: fixed;
+}
 body.logged-in header#site-header {
   top: 32px;
 }
