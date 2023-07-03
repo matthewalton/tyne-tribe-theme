@@ -22,10 +22,10 @@
     const setTheme = theme => {
         if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.documentElement.setAttribute('data-bs-theme', 'dark');
-            document.getElementById('search-form').setAttribute('data-bs-theme', 'dark');
+            document.getElementById('search-form')?.setAttribute('data-bs-theme', 'dark');
         } else {
             document.documentElement.setAttribute('data-bs-theme', theme);
-            document.getElementById('search-form').setAttribute('data-bs-theme', theme);
+            document.getElementById('search-form')?.setAttribute('data-bs-theme', theme);
         }
     }
 
@@ -46,15 +46,15 @@
             element.setAttribute('aria-pressed', 'false')
         })
 
-        btnToActive.classList.add('active')
-        btnToActive.setAttribute('aria-pressed', 'true')
+        btnToActive?.classList.add('active')
+        btnToActive?.setAttribute('aria-pressed', 'true')
 
         if (theme === 'light') {
-            document.querySelector('#bd-theme svg.light').classList.remove('d-none');
-            document.querySelector('#bd-theme svg.dark').classList.add('d-none');
+            document.querySelector('#bd-theme svg.light')?.classList.remove('d-none');
+            document.querySelector('#bd-theme svg.dark')?.classList.add('d-none');
         } else {
-            document.querySelector('#bd-theme svg.light').classList.add('d-none');
-            document.querySelector('#bd-theme svg.dark').classList.remove('d-none');
+            document.querySelector('#bd-theme svg.light')?.classList.add('d-none');
+            document.querySelector('#bd-theme svg.dark')?.classList.remove('d-none');
         }
 
         const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`

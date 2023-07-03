@@ -6,9 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 $site_name = get_bloginfo( 'name' );
 $header_nav_menu = wp_nav_menu( [
 	'theme_location' => 'header-menu',
-    'menu_class' => 'nav nav-underline me-auto mb-2 mb-lg-0',
-	'list_item_class' => 'nav-item',
-    'link_class' => 'nav-link',
+	'depth'           => 2,
+	'menu_class'      => 'nav nav-underline me-auto mb-2 mb-lg-0',
+	'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+	'walker'          => new WP_Bootstrap_Navwalker(),
 	'echo' => false,
 ] );
 ?>
