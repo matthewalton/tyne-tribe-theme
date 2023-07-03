@@ -161,7 +161,7 @@ get_header();
                         <?php endwhile; ?>
                     </div>
 		        <?php else : ?>
-                    <p><?php echo esc_html__( 'It seems we can\'t find what you\'re looking for.', 'hello-elementor' ); ?></p>
+                    <p><?php echo esc_html__( 'It seems we can\'t find what you\'re looking for.', TYNE_TRIBE_DOMAIN ); ?></p>
 		        <?php endif; ?>
             </div>
 

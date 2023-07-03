@@ -7,15 +7,10 @@
  * 19 | | 
  * 20 | |       li.nav-item {
  * 21 | |         width: 100%;
- * 22 | | 
- * 23 | |         a {
- * 24 | |           width: auto;
- * 25 | |           text-align: center;
- * 26 | |         }
- * 27 | |       }
- * 28 | |     }
- * 29 | |   }
- * 30 | \ }
+ * 22 | |       }
+ * 23 | |     }
+ * 24 | |   }
+ * 25 | \ }
  *    '
  *   assets/scss/custom/_navbar.scss 15:1    @import
  *   assets/scss/custom/components.scss 3:9  root stylesheet */
@@ -28,5 +23,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 15 \2502  \250c  @include media-breakpoint-down(sm) {\a 16 \2502  \2502    header.navbar {\a 17 \2502  \2502      ul.nav {\a 18 \2502  \2502        gap: 0.25rem;\a 19 \2502  \2502  \a 20 \2502  \2502        li.nav-item {\a 21 \2502  \2502          width: 100%;\a 22 \2502  \2502  \a 23 \2502  \2502          a {\a 24 \2502  \2502            width: auto;\a 25 \2502  \2502            text-align: center;\a 26 \2502  \2502          }\a 27 \2502  \2502        }\a 28 \2502  \2502      }\a 29 \2502  \2502    }\a 30 \2502  \2514  }\a    \2575 \a   assets/scss/custom/_navbar.scss 15:1    @import\a   assets/scss/custom/components.scss 3:9  root stylesheet";
+  content: "Error: Undefined mixin.\a    \2577 \a 15 \2502  \250c  @include media-breakpoint-down(sm) {\a 16 \2502  \2502    header.navbar {\a 17 \2502  \2502      ul.nav {\a 18 \2502  \2502        gap: 0.25rem;\a 19 \2502  \2502  \a 20 \2502  \2502        li.nav-item {\a 21 \2502  \2502          width: 100%;\a 22 \2502  \2502        }\a 23 \2502  \2502      }\a 24 \2502  \2502    }\a 25 \2502  \2514  }\a    \2575 \a   assets/scss/custom/_navbar.scss 15:1    @import\a   assets/scss/custom/components.scss 3:9  root stylesheet";
 }

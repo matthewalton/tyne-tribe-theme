@@ -6,6 +6,10 @@ $wp-admin-bar-mobile-offset: 46px;
 body {
   margin-top: $fixed-navbar-offset;
 
+  div#wpadminbar {
+    position: fixed;
+  }
+
   &.logged-in {
     header#site-header {
       top: $wp-admin-bar-offset;

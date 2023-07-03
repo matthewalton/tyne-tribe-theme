@@ -2,7 +2,7 @@ header.navbar {
   ul.nav {
     li.nav-item {
       &.current-menu-item {
-        a {
+        & > a {
           font-weight: 700;
           color: var(--bs-nav-underline-link-active-color);
           border-bottom-color: currentcolor;
@@ -19,11 +19,6 @@ header.navbar {
 
       li.nav-item {
         width: 100%;
-
-        a {
-          width: auto;
-          text-align: center;
-        }
       }
     }
   }

@@ -140,3 +140,15 @@ if ( ! function_exists( 'tynetribe_menu_link_class' ) ) {
 
 	add_filter( 'nav_menu_link_attributes', 'tynetribe_menu_link_class', 10, 3 );
 }
+
+if ( ! function_exists( 'tynetribe_register_navwalker' ) ) {
+	/**
+	 * Register Custom Navigation Walker
+	 */
+	function tynetribe_register_navwalker(): void
+	{
+		require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+	}
+
+	add_action( 'after_setup_theme', 'tynetribe_register_navwalker' );
+}
