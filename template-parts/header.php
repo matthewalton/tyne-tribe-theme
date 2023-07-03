@@ -45,7 +45,7 @@ $header_nav_menu = wp_nav_menu( [
     </div>
 </header>
 
-<div class="position-fixed end-0 bottom-0 translate-middle">
+<div class="position-fixed end-0 bottom-0 translate-middle" style="z-index: 999;">
     <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
         <button class="btn btn-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill light d-none me-2 theme-icon" viewBox="0 0 16 16">
