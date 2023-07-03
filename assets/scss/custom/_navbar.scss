@@ -1,7 +1,7 @@
 header.navbar {
   ul.nav {
     li.nav-item {
-      &.current-menu-item {
+      &.current-menu-item, &.current-menu-ancestor {
         & > a {
           font-weight: 700;
           color: var(--bs-nav-underline-link-active-color);
